@@ -1,3 +1,5 @@
+require "utils"
+
 ---@type string[]
 local testInput = {
     "..@@.@@@@.",
@@ -88,3 +90,6 @@ local function processInput(input)
     return numValid
 end
 assert(processInput(testInput) == 13)
+
+local result = processInput(ParseLinesIntoTable("day-04-input.txt"))
+print(result)
