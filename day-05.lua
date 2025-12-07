@@ -88,39 +88,6 @@ local function processInput(input)
         _countValid = _countValid + (range[2] - range[1] + 1)
     end
 
-    -- ---@type Range[]
-    -- local trimmedRanges = {}
-    -- for i = 1, #freshRanges do
-    --     if i == 1 then
-    --         table.insert(trimmedRanges, {
-    --             freshRanges[i][1],
-    --             freshRanges[i][2],
-    --         })
-    --     else
-    --         local _a = freshRanges[i][1]
-    --         local _b = freshRanges[i][2]
-    --         for _, range in ipairs(trimmedRanges) do
-    --             local prevA = range[1]
-    --             local prevB = range[2]
-    --             if _a >= prevA and _a <= prevB then
-    --                 _a = prevB + 1
-    --             end
-    --             if _b >= prevA and _b <= prevB then
-    --                 _b = prevA - 1
-    --             end
-    --         end
-    --         table.insert(trimmedRanges, {
-    --             _a,
-    --             _b,
-    --         })
-    --     end
-    -- end
-    -- for t, range in ipairs(trimmedRanges) do
-    --     local inRange = range[2] - range[1] + 1
-    --     print(range[1] .. "-" .. range[2] .. "->" .. inRange)
-    --     _countValid = _countValid + inRange
-    -- end
-
     return freshIngredientCount, _countValid
 end
 
