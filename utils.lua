@@ -6,10 +6,8 @@ function ParseLinesIntoTable(fileName)
         error("File not found")
     end
 
-    local content = file:read("*a")
-    --- split by newline into table
     local lines = {}
-    for line in content:gmatch("[^\r\n]+") do
+    for line in file:lines() do
         table.insert(lines, line)
     end
     file:close()
